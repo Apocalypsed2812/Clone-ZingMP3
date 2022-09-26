@@ -80,7 +80,7 @@ const app = {
 
     render: function(){
         const htmls = this.songs.map((song, index) => {
-            return `<div class="col l-4">
+            return `<div class="col l-4 m-6 c-12">
                         <div class="container__song-new" data-image="${song.image}" data-name="${song.name}" data-singer="${song.singer}" data-path="${song.path}">
                             <img src="${song.image}" alt="" class="container__song-new-img">
                             <div class="container__song-info">
@@ -90,6 +90,8 @@ const app = {
                             </div>
                             <div class="container__song-new-click">
                                 <i class="fa-solid fa-circle-play"></i>
+                            </div>
+                            <div class="container__song-new-dot">
                                 <i class="fa-solid fa-ellipsis"></i>
                             </div>
                         </div>

@@ -1,0 +1,55 @@
+/* Mobile & tablet */
+@media (max-width: 1023px){
+    
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .header{
+        display: none;
+    }
+
+    .container-mobile{
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+
+    .container__header{
+        padding: 16px 78px 8px 16px;
+    }
+
+    .container__header-search .container__header-search-icon{
+        display: none;
+    }
+
+    .container__header-control{
+        display: none;
+    }
+
+    .container__header-with-search{
+        width: 290px;
+    }
+
+    .container__header-with-search input{
+        padding: 8px;
+    }
+
+    .container__header-control-mobile{
+        display: block;
+    }
+
+    .container__header-search .container__header-search-menu-mobile{
+        display: block;
+    }
+
+    .container__slider{
+        display: none;
+    }
+}
