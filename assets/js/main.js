@@ -132,10 +132,6 @@ const app = {
                             <p class="music__play-song-title">${name}</p>
                             <p class="music__play-song-singer">${singer}</p>
                         </div>
-                        <div class="music__play-song-action">
-                            <i class="fa-solid fa-heart"></i>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
                     </div>
                     <div class="music__play-control">
                         <div class="control">
@@ -162,15 +158,15 @@ const app = {
                         <audio id="audio" src="${path}"></audio>
                     </div>
                     <div class="music__play-add">
-                        <i class="fa-regular fa-circle-dot"></i>
-                        <i class="fa-solid fa-microscope"></i>
+                        <i class="fa-regular fa-circle-dot hide-on-tablet"></i>
+                        <i class="fa-solid fa-microscope hide-on-tablet"></i>
                         <i class="fa-brands fa-microsoft"></i>
                         <div>
                             <i class="fa-solid fa-volume-high"></i>
                             <input id="volume" class="volume" type="range" value="0" step="1" min="0" max="100" />
                         </div>
-                        <div class="music__play-add--separate"></div>
-                        <i class="fa-solid fa-music"></i>
+                        <div class="music__play-add--separate hide-on-tablet"></div>
+                        <i class="fa-solid fa-music hide-on-tablet"></i>
                     </div>`
         
                 musicPlay.innerHTML = currentSongNew
@@ -332,3 +328,5 @@ const app = {
 }
 
 app.start()
+
+

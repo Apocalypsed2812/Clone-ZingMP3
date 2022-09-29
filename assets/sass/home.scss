@@ -1,33 +1,3 @@
-/* Modal */
-.modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    animation: fadeIn linear 0.1s;
-    //display: none;
-}
-
-.modal__overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 20;
-}
-
-.modal__body{
-    --growth-from: 0.7;
-    --growth-to: 1;
-    margin: auto;
-    position: relative;
-    z-index: 21;
-    animation: growth linear 0.1s;
-}
-
-
 .app{
     display: flex;
 }
@@ -42,6 +12,7 @@
     // top: 0;
     // bottom: $music-play;
     background-color: #231b2e;
+    //display: block !important;
 
     .header__playlist-add{
         position: absolute;
@@ -71,6 +42,10 @@
     .header__logo-img{
         width: 120px;
         height: 40px;
+    }
+
+    .header__logo-tablet{
+        display: none;
     }
 }
 
@@ -109,6 +84,10 @@
     }
 }
 
+.header__item-tablet-icon-right{
+    display: none;
+}
+
 .header__list-separate{
     height: 2px;
     background-color: $white-color;
@@ -118,9 +97,13 @@
 //Container
 .container{
     flex: 1;
+    //width: calc(100% - $header-width);
+    overflow: hidden;
     background-color: #170f23;
     padding-bottom: calc(40px + $music-play);
-    padding-left: $header-width;
+    padding-left: calc($header-width + 73px);
+    min-height: 100vh;
+    padding-right: 77px;
 }
 
 .container__header{
@@ -208,15 +191,39 @@
     }
 }
 
-// .container__header-with-search-input:focus .container__header-with-search{
-//     border-bottom-left-radius: 0px;
-//     border-bottom-right-radius: 0px;
-//     background-color: #432275;
-// }
+.container__header-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1;
+    cursor: pointer;
+}
 
-// .container__header-with-search-input:focus .container__header-with-search-result{
-//     display: block;
-// }
+.nav__input-header{
+    display: none;
+}
+
+.nav__input-header:checked ~ .header{
+    display: block;
+}
+
+.nav__input-header:checked ~ .container__header-overlay{
+    display: block;
+}
+
+.container__header-with-search-input:focus .container__header-with-search{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #432275;
+}
+
+.container__header-with-search-input:focus ~ .container__header-with-search-result{
+    display: block;
+}
 
 .container__header-control{
     display: flex;
@@ -247,8 +254,9 @@
 }
 
 .container__choose{
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    width: 100%;
+    align-items: center;
     color: $white-color;
     font-size: 14px;
     text-transform: uppercase;
@@ -257,6 +265,7 @@
 
 .container__album{
     display: flex;
+    flex-direction: row;
     align-items: center;
 
     .container__album-song{
@@ -266,6 +275,7 @@
         line-height: 14px;
         margin-right: 16px;
         cursor: pointer;
+        width: fit-content;
     }
 
     .container__album-album{
@@ -275,12 +285,15 @@
         border: 1px solid $white-color;
         line-height: 14px;
         cursor: pointer;
+        width: fit-content;
     }
 }
 
 .container__album-all{
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
     cursor: pointer;
-
     i{
         margin-left: 8px;
     }
