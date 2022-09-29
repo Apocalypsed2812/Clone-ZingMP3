@@ -1710,6 +1710,57 @@ button:hover {
     transform: scale(1.1);
   }
 }
+.zing__chart-view-100 {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 32px 0;
+}
+
+.zing__chart-view-100-btn {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 8px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.zing__chart-view-100-btn:hover {
+  background-color: #817d87;
+}
+
+.zing__chart-rank {
+  background-color: #231736;
+  height: 100%;
+  padding: 16px 0;
+  max-width: 1400px;
+}
+
+.zing__chart-rank-title {
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.zing__chart-item-title {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  margin: 8px 0;
+  font-size: 20px;
+}
+.zing__chart-item-title i {
+  color: #7200a1;
+  margin-left: 10px;
+}
+
+.zing__chart-item {
+  background-color: #2d223f;
+  border-radius: 8px;
+  padding: 8px 4px 0;
+}
+
 /* Mobile & tablet */
 @media (max-width: 1024px) {
   .header__playlist-add {
@@ -1776,6 +1827,9 @@ button:hover {
   .music__list-des {
     margin-top: 16px;
     padding-right: 8px;
+  }
+  .zing__chart-item {
+    margin-bottom: 16px;
   }
 }
 /* Mobile */
@@ -1862,6 +1916,9 @@ button:hover {
   }
   .music__list-des {
     margin-top: 16px;
+  }
+  .zing__chart-item {
+    margin-bottom: 16px;
   }
 }
 
