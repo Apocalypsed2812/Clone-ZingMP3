@@ -749,3 +749,101 @@
 .auth-form__help-forgot{
     color: $black-color;
 }
+
+// Admin
+.header__admin-text{
+    color: $white-color;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 24px;
+    font-size: 18px;
+}
+
+.admin__song{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.admin__song-table{
+    width: 100%;
+    color: $white-color;
+    text-align: center;
+    border-radius: 8px;
+    //overflow-x: auto;
+}
+
+.admin__song-table-head{
+    //color:#7200a1;
+    font-weight: 600;
+    td{
+        padding: 16px 16px;
+        width: 50px;
+    }
+}
+
+.admin__song-table-body{
+    td{
+        padding: 8px 16px;
+        text-transform: capitalize;
+        width: 50px;
+
+        i{
+            padding: 0 8px;
+            cursor: pointer;
+        }
+    }
+
+    tr:last-child{
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+.admin__song-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button{
+        background-color: #7200a1;
+        border-radius: 20px;
+        color: $white-color;
+        padding: 10px 32px;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.admin__song-pagination-list{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin__song-pagination-item{
+    .admin__song-pagination-link{
+        color: $white-color;
+        margin: 0 16px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .admin__song-pagination-link--active{
+        background-color: #7200a1;
+        padding: 8px 14px;
+        border-radius: 50%;
+    }
+}
+
+.admin__rank-description-title{
+    color: $white-color;
+    font-size: 18px;
+}
+
+.header__item--active{
+    background-color: #7200a1;
+}
