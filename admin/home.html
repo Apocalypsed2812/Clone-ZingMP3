@@ -173,9 +173,50 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
+    </div>
 
-        
+    <!-- Modal add song -->
+    <div class="modal modal-add-staff">
+        <div class="modal__overlay modal__overlay-register"></div>
+        <div class="modal__body modal__container">
+            <!-- Register form -->
+            <div class="auth-form auth-form-register">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h2>Thêm nhân viên</h2>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                <form action="" method="post">
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập mã nhân viên" name="staff_id" id="staff_id_add_staff">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập username" name="username" id="username_add_staff">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập email" name="email" id="email_add_staff">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập tên" name="name" id="name_add_staff">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập số điện thoại" name="phone" id="phone_add_staff">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Vui lòng nhập địa chỉ" name="address" id="address_add_staff">
+                        </div>
+                    </div>
+    
+                    <div class="auth-form__controls auth-form__controls-add">
+                        <button type="button" class="btn auth-form__controls-back btn--normal btn-close-add-staff">Hủy</button>
+                        <button type="submit" class="btn btn--primary btn-add-staff">Thêm</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
     </div>
 
 

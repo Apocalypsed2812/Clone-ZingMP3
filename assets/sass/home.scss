@@ -632,7 +632,7 @@
     //overflow: hidden;
 }
 .auth-form__container{
-    padding: 0 32px;
+    padding: 16px 32px;
 }
 
 .auth-form__header{
@@ -640,7 +640,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 12px;
-    margin-top: 50px;
+
+    i{
+        font-size: 24px;
+        cursor: pointer;
+    }
 }
 
 .auth-form__heading{
